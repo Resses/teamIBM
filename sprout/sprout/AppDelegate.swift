@@ -8,13 +8,17 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var user: User?
     var window: UIWindow?
-
+    var cupOfWater: Int?
+    var waterView: WaterViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        waterView = WaterViewController()
+        cupOfWater = 0
         // Override point for customization after application launch.
         return true
     }

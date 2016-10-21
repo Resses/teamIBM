@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407.19999999999999" y="-245.12743628185908"/>
+            <point key="canvasLocation" x="-530" y="-260"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="z05-X2-jc8">
@@ -104,13 +104,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="sportButton"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPu-ua-b26">
+                                <frame key="frameInset" minX="16" minY="20" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeBtn"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yKS-yM-tSm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGH-3i-hkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-934" y="752"/>
+            <point key="canvasLocation" x="-1465" y="752"/>
         </scene>
         <!--Water View Controller-->
         <scene sceneID="fBO-8w-Zbr">
@@ -129,6 +137,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Haha" image="doneBtn"/>
                                 <connections>
+                                    <action selector="doneBtn:" destination="9cT-Kg-kiJ" eventType="touchUpInside" id="ASP-yl-eEn"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="LQA-SX-1hI"/>
                                 </connections>
                             </button>
@@ -236,10 +245,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="cup1" destination="Kgd-IR-uMO" id="Y5m-fZ-sfc"/>
+                        <outlet property="cup2" destination="4x4-WI-03h" id="ckN-Sg-NiU"/>
+                        <outlet property="cup3" destination="SS2-4u-jR7" id="KIE-Xr-aGw"/>
+                        <outlet property="cup4" destination="13D-wN-WOQ" id="p1L-Rs-dpH"/>
+                        <outlet property="cup5" destination="sNP-5a-L3V" id="lwK-t1-eb2"/>
+                        <outlet property="cup6" destination="ASM-CB-Ud5" id="nhm-aC-IQk"/>
+                        <outlet property="cup7" destination="KCW-Mp-Fvj" id="dvx-Xn-JQe"/>
+                        <outlet property="cup8" destination="N0p-rG-oBk" id="D2W-Zd-hNK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPL-Nt-MyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112.8" y="680.5097451274363"/>
+            <point key="canvasLocation" x="-399" y="752"/>
         </scene>
         <!--Sport View Controller-->
         <scene sceneID="Mtw-cL-uA2">
@@ -257,21 +276,38 @@
                                 <frame key="frameInset" minX="16" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="sleepButton"/>
+                                <connections>
+                                    <segue destination="2e8-9c-70W" kind="show" id="xXl-o5-qYr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcq-Mx-II3">
                                 <frame key="frameInset" minX="106" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="foodButton"/>
+                                <connections>
+                                    <segue destination="VPs-72-qOu" kind="show" id="vyF-KA-MHJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTW-qa-uAA">
                                 <frame key="frameInset" minX="198" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="waterButton"/>
+                                <connections>
+                                    <segue destination="9cT-Kg-kiJ" kind="show" id="298-T1-Dic"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9W-yO-vVr">
                                 <frame key="frameInset" minX="289" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="run-chosen"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-9b-kQH">
+                                <frame key="frameInset" minX="16" minY="20" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeBtn"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1JL-Ie-p0E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,16 +338,33 @@
                                 <frame key="frameInset" minX="106" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="foodButton"/>
+                                <connections>
+                                    <segue destination="VPs-72-qOu" kind="show" id="fsT-2L-ukA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xc-v6-g2W">
                                 <frame key="frameInset" minX="198" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="waterButton"/>
+                                <connections>
+                                    <segue destination="9cT-Kg-kiJ" kind="show" id="j34-5u-eq6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdH-Ym-k8D">
                                 <frame key="frameInset" minX="289" width="70" height="70" maxY="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="sportButton"/>
+                                <connections>
+                                    <segue destination="49s-lP-kwK" kind="show" id="BPR-Fc-Fw4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfQ-K6-Yqz">
+                                <frame key="frameInset" minX="16" minY="20" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeBtn"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2qn-ym-wH2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jV5-Ws-FNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="38"/>
+            <point key="canvasLocation" x="966" y="-181"/>
         </scene>
     </scenes>
     <resources>
@@ -338,9 +391,10 @@
         <image name="watercupGrey" width="100" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H6q-Vc-6A3"/>
         <segue reference="LQA-SX-1hI"/>
-        <segue reference="zrh-6t-U99"/>
-        <segue reference="aGR-27-S7j"/>
+        <segue reference="298-T1-Dic"/>
+        <segue reference="FXo-ix-dE6"/>
+        <segue reference="8ae-6Y-iGB"/>
+        <segue reference="Qg9-bg-gSN"/>
     </inferredMetricsTieBreakers>
 </document>
