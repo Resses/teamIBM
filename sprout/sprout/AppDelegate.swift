@@ -13,12 +13,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var user: User?
     var window: UIWindow?
-    var cupOfWater: Int?
     var waterView: WaterViewController?
+    var sportView: SportViewController?
+    var sleepView: SleepViewController?
+    var foodView: FoodViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         waterView = WaterViewController()
-        cupOfWater = 0
+        sportView = SportViewController()
+        sleepView = SleepViewController()
+        foodView = FoodViewController()
+
+        // A Fake user for now
+        user = User.init(username: "Tony", password: "12345", firstName: "Tony", lastName: "Wu", parentEmail: "123@321.com")
         // Override point for customization after application launch.
         return true
     }
