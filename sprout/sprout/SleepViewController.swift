@@ -18,23 +18,35 @@ class SleepViewController: UIViewController {
     @IBOutlet weak var done: UIButton!
     
     @IBOutlet weak var home: UIButton!
-//    let appDel = UIApplication.shared.delegate! as! AppDelegate
-    var hoursOfSleep: Int = 0
+    let appDel = UIApplication.shared.delegate! as! AppDelegate
+    var hoursOfSleep: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hoursOfSleep = appDel.user!.hoursOfSleep
+
         //alignment()
         
-        //clear the label for hours slept
-        hoursSleptLabel.text = ""
-        
-        //TODO:
-        //set the times to show the last saved times if available.
-        //show hours slept if available
-        //Else set to defaults 9pm - 7am. and Hide hoursSlept
-        //Find out about storing the times locally and only the number of hours in the class?
-        
+        //Use times and number of hours saved in appdel if available
+        if(self.hoursOfSleep > 0){
+            hoursSleptLabel.text = self.hoursOfSleep.description + " hours"
+            timeSlept.date = appDel.user!.timeSlept
+            timeWoke.date = appDel.user!.timeWoke
+        }
+        //else clear the label for hours slept and set default sleep and wake times
+        else{
+            hoursSleptLabel.text = ""
+            setInitialTimes()
+        }
+    }
+    
+    func setInitialTimes(){
+        let date: Date = Date()
+        let cal: Calendar = Calendar(identifier: .gregorian)
+        let defaultSleepTime: Date = cal.date(bySettingHour: 21, minute: 30, second: 0, of: date)!
+        timeSlept.date = defaultSleepTime
+        let defaultWakeTime: Date = cal.date(bySettingHour: 7, minute: 0, second: 0, of: date)!
+        timeWoke.date = defaultWakeTime
     }
 
     //possible way of sizing/aligning content based on screen width/height. Not completed, just here as an example...
@@ -56,7 +68,7 @@ class SleepViewController: UIViewController {
         //Display that value in hoursOfSleepLbl
         
         //get the number of hours between the two times
-        var time = round((timeWoke.date.timeIntervalSince(timeSlept.date))/3600)
+        var time = round((timeWoke.date.timeIntervalSince(timeSlept.date))/1800) / 2.0
         //negative hours would occur because sleeping is the day before. Add 24 hours.
         if(time < 0){
             time = 24 + time
@@ -65,17 +77,17 @@ class SleepViewController: UIViewController {
         if(time > 24){
             time = time.truncatingRemainder(dividingBy: 24)
         }
-        
+        self.hoursOfSleep = time
+
+
         //Display hours slept on the label
-        hoursSleptLabel.text  = Int(time).description + " hours"
+        hoursSleptLabel.text  = String(format: time == floor(time) ? "%.0f" : "%.1f", time) + " hours"
     }
     
     @IBAction func doneBtn(_ sender: AnyObject) {
-        
-        //TODO:
-        //write the code to save the info
-        //self.appDel.user.hoursOfSleep = self.hoursOfSleep
-
+        self.appDel.user?.hoursOfSleep = self.hoursOfSleep
+        self.appDel.user?.timeSlept = self.timeSlept.date
+        self.appDel.user?.timeWoke = self.timeWoke.date
     }
 
     /*
@@ -88,10 +100,4 @@ class SleepViewController: UIViewController {
     }
     */
 
-    
-    /* 
-     let yesterday = NSCalendar.current.date(byAdding: .day, value: -1, to: NSDate() as Date)!
-
-     timeSlept.maximumDate = NSCalendar.current.date(bySetting: .hour, value: 12, of: yesterday)
-     */
 }
