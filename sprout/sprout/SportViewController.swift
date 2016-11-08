@@ -36,7 +36,7 @@ class SportViewController: UIViewController {
     }
     
     @IBAction func chooseSport(_ sender: UIButton) {
-        // Get rid of previously chosen one, because the user is only allowed to choose one 
+        // This for-loop gets rid of previously chosen one, because the user is only allowed to choose one
         // sport each time
         for btn in sportBtns {
             if btn.isSelected {
@@ -53,8 +53,10 @@ class SportViewController: UIViewController {
     
     @IBAction func doneBtnPressed(_ sender: AnyObject) {
         exercise = Activity.init(sport: sportType, minutes: minutes)
-        appDel.user?.activities.append(exercise!)
+        appDel.user!.activities.append(exercise!)
+        appDel.user!.score += 1
         print("Sport: ?, Minutes: ?",sportType, minutes)
+        
     }
     /*
     // MARK: - Navigation

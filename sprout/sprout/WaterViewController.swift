@@ -25,7 +25,6 @@ class WaterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//      appDel.waterView.performAction()
         self.cupDrank = appDel.user!.cupsOfWater
         self.cups = [self.cup1, self.cup2, self.cup3, self.cup4, self.cup5, self.cup6, self.cup7, self.cup8]
         if self.cupDrank > 0 {
@@ -55,6 +54,7 @@ class WaterViewController: UIViewController {
     
     @IBAction func doneBtn(_ sender: AnyObject) {
         self.appDel.user?.cupsOfWater = self.cupDrank
+        self.appDel.user?.score += self.cupDrank
     }
 
     

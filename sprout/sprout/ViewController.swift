@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scoreBar: UIProgressView!
+    let appDel = UIApplication.shared.delegate! as! AppDelegate
+    var currentScore: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.currentScore = appDel.user!.score
+        scoreBar.setProgress(Float(self.currentScore) / 10.0, animated: true)
+        let scale = CGAffineTransform(scaleX: 1, y: 10)
+        let rotation = CGAffineTransform(rotationAngle:(1.5 * CGFloat(M_PI)))
+        self.scoreBar.transform = scale.concatenating(rotation)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
