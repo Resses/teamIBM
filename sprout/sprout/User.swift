@@ -17,7 +17,10 @@ class User {
     var parentEmail: String
     var score: Int = 0
     var cupsOfWater: Int = 0
-    var hoursOfSleep: Int = 0
+    var hoursOfSleep: Double = 0
+    var timeSlept: Date = Date()
+    var timeWoke: Date = Date()
+
     var food = [Food]()
     var activities = [Activity]()
     var friends = [User]()
