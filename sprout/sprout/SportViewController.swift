@@ -11,7 +11,7 @@ import UIKit
 class SportViewController: UIViewController {
     
     @IBOutlet weak var exerciseTimePicker: UIDatePicker!
-    @IBOutlet var sportBtns: [SportButton]!
+    @IBOutlet var sportBtns: [UIButton]!
 
     let appDel = UIApplication.shared.delegate! as! AppDelegate
     var sportType: String = ""
@@ -35,20 +35,19 @@ class SportViewController: UIViewController {
         self.minutes = Int(exerciseTimePicker.countDownDuration/60)
     }
     
-    @IBAction func chooseSport(_ sender: SportButton) {
+    @IBAction func chooseSport(_ sender: UIButton) {
         // Get rid of previously chosen one, because the user is only allowed to choose one 
         // sport each time
         for btn in sportBtns {
-            if btn.chosen {
-                btn.chosen = false
+            if btn.isSelected {
+                btn.isSelected = false
                 btn.setImage(UIImage.init(named: btn.currentTitle!), for: UIControlState.normal)
             }
         }
         sportType = sender.currentTitle!
-        sender.chosen = true
+        sender.isSelected = true
         
-        // TODO: after MC provides the icons with circles
-        //sender.setImage(UIImage.init(named: sender.currentTitle!+"chosen"), for: UIControlState.selected)
+        sender.setImage(UIImage.init(named: sender.currentTitle!+"_chosen"), for: UIControlState.selected)
         
     }
     

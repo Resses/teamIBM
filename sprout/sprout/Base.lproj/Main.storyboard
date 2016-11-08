@@ -338,24 +338,24 @@
                                     <action selector="timeSet:" destination="49s-lP-kwK" eventType="touchUpInside" id="gnp-ry-Hp7"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-f5-AHh" customClass="SportButton" customModule="sprout" customModuleProvider="target">
-                                <frame key="frameInset" minX="55" minY="308" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-f5-AHh">
+                                <frame key="frameInset" minX="26" minY="308" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="basketball" image="basketball"/>
                                 <connections>
                                     <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="mTA-Ak-ClU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pc-W1-1of" customClass="SportButton" customModule="sprout" customModuleProvider="target">
-                                <frame key="frameInset" minX="126" minY="308" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pc-W1-1of">
+                                <frame key="frameInset" minX="162" minY="308" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="soccor" image="soccor"/>
                                 <connections>
                                     <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="UGz-OF-zNE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r6-Mg-HJn" customClass="SportButton" customModule="sprout" customModuleProvider="target">
-                                <frame key="frameInset" minX="198" minY="308" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r6-Mg-HJn">
+                                <frame key="frameInset" minX="234" minY="308" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="football" image="football"/>
                                 <connections>
@@ -371,12 +371,60 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="ROE-xy-Oej"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njY-mf-e1v" customClass="SportButton" customModule="sprout" customModuleProvider="target">
-                                <frame key="frameInset" minX="267" minY="308" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njY-mf-e1v">
+                                <frame key="frameInset" minX="299" minY="308" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="bike" image="bike"/>
                                 <connections>
                                     <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="9J8-jP-Yi2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-WF-oG9">
+                                <frame key="frameInset" minX="90" minY="308" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="baseball" image="baseball"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="Khp-lJ-Llv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKf-08-4Jl">
+                                <frame key="frameInset" minX="26" minY="381" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="run" image="run"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="kX4-qy-cQC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s03-Gc-MKH">
+                                <frame key="frameInset" minX="90" minY="381" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="weight" image="weight"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="Vx6-19-W09"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q54-3g-JJr">
+                                <frame key="frameInset" minX="162" minY="381" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="run" image="girlrun"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="2kF-xQ-CGW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T70-md-1gU">
+                                <frame key="frameInset" minX="234" minY="381" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="dance" image="dance"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="UpE-zd-hUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM0-2J-rDc">
+                                <frame key="frameInset" minX="299" minY="381" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="swim" image="swim"/>
+                                <connections>
+                                    <action selector="chooseSport:" destination="49s-lP-kwK" eventType="touchUpInside" id="33W-b8-cnB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -388,6 +436,12 @@
                         <outletCollection property="sportBtns" destination="2pc-W1-1of" collectionClass="NSMutableArray" id="zwC-DO-J2d"/>
                         <outletCollection property="sportBtns" destination="1r6-Mg-HJn" collectionClass="NSMutableArray" id="X4K-yF-PWz"/>
                         <outletCollection property="sportBtns" destination="njY-mf-e1v" collectionClass="NSMutableArray" id="H0O-4R-LXR"/>
+                        <outletCollection property="sportBtns" destination="S5r-WF-oG9" collectionClass="NSMutableArray" id="FTQ-cn-Z1x"/>
+                        <outletCollection property="sportBtns" destination="QKf-08-4Jl" collectionClass="NSMutableArray" id="6xe-fs-Ppg"/>
+                        <outletCollection property="sportBtns" destination="s03-Gc-MKH" collectionClass="NSMutableArray" id="K3t-Oh-0Gp"/>
+                        <outletCollection property="sportBtns" destination="q54-3g-JJr" collectionClass="NSMutableArray" id="bqP-tG-slC"/>
+                        <outletCollection property="sportBtns" destination="T70-md-1gU" collectionClass="NSMutableArray" id="ayi-Md-bhW"/>
+                        <outletCollection property="sportBtns" destination="EM0-2J-rDc" collectionClass="NSMutableArray" id="juQ-UE-7ez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esr-W7-XI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -521,23 +575,29 @@
         </scene>
     </scenes>
     <resources>
-        <image name="basketball" width="116" height="112"/>
-        <image name="bike" width="144" height="127"/>
+        <image name="baseball" width="84" height="78"/>
+        <image name="basketball" width="105" height="101"/>
+        <image name="bike" width="117" height="102"/>
+        <image name="dance" width="62" height="96"/>
         <image name="doneBtn" width="272" height="78"/>
         <image name="eat-chosen" width="114" height="114"/>
         <image name="foodButton" width="114" height="114"/>
-        <image name="football" width="113" height="109"/>
+        <image name="football" width="92" height="88"/>
+        <image name="girlrun" width="71" height="86"/>
         <image name="homeBtn" width="114" height="114"/>
+        <image name="run" width="72" height="89"/>
         <image name="run-chosen" width="114" height="114"/>
         <image name="sleep-chosen" width="114" height="114"/>
         <image name="sleepButton" width="114" height="114"/>
-        <image name="soccor" width="90" height="91"/>
+        <image name="soccor" width="81" height="81"/>
         <image name="socialBtn" width="114" height="114"/>
         <image name="sportButton" width="114" height="114"/>
         <image name="sprout" width="434" height="684"/>
+        <image name="swim" width="115" height="123"/>
         <image name="water-chosen" width="114" height="114"/>
         <image name="waterButton" width="114" height="114"/>
         <image name="watercupGrey" width="100" height="118"/>
+        <image name="weight" width="94" height="98"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1JL-Ie-p0E"/>

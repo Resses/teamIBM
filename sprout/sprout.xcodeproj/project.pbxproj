@@ -23,7 +23,6 @@
 		5303D6441DBA71C6005469BE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6411DBA71C6005469BE /* Activity.swift */; };
 		5303D6451DBA71C6005469BE /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6421DBA71C6005469BE /* Food.swift */; };
 		5303D6461DBA71C6005469BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6431DBA71C6005469BE /* User.swift */; };
-		5351799E1DCEBCEB005D28E7 /* SportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351799D1DCEBCEB005D28E7 /* SportButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		5303D6411DBA71C6005469BE /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5303D6421DBA71C6005469BE /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5303D6431DBA71C6005469BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5351799D1DCEBCEB005D28E7 /* SportButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				5303D6411DBA71C6005469BE /* Activity.swift */,
-				5351799D1DCEBCEB005D28E7 /* SportButton.swift */,
 				5303D6421DBA71C6005469BE /* Food.swift */,
 				5303D6431DBA71C6005469BE /* User.swift */,
 				5303D6071DB97BAE005469BE /* AppDelegate.swift */,
@@ -300,7 +297,6 @@
 				5303D6081DB97BAE005469BE /* AppDelegate.swift in Sources */,
 				5303D6441DBA71C6005469BE /* Activity.swift in Sources */,
 				5303D6451DBA71C6005469BE /* Food.swift in Sources */,
-				5351799E1DCEBCEB005D28E7 /* SportButton.swift in Sources */,
 				5303D63C1DB98DD4005469BE /* SportViewController.swift in Sources */,
 				5303D63E1DB9B486005469BE /* WaterCupsCollectionViewController.swift in Sources */,
 				5303D6461DBA71C6005469BE /* User.swift in Sources */,
