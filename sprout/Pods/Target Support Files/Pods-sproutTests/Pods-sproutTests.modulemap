@@ -1,0 +1,6 @@
+framework module Pods_sproutTests {
+  umbrella header "Pods-sproutTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
