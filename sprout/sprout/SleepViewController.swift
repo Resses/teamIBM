@@ -24,6 +24,9 @@ class SleepViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hoursOfSleep = appDel.user!.hoursOfSleep
+        timeSlept.setValue(UIColor .orange, forKey: "textColor")
+        timeWoke.setValue(UIColor .orange, forKey: "textColor")
+
 
         //alignment()
         
