@@ -8,6 +8,7 @@
 
 
 import Foundation
+import UIKit
 
 class User {
     var username: String
@@ -15,17 +16,17 @@ class User {
     var firstName: String
     var lastName: String
     var parentEmail: String
+    var likes: Int = 0 // Number of likes received from friends
     var score: Int = 0
     var cupsOfWater: Int = 0
     var hoursOfSleep: Double = 0
     var timeSlept: Date = Date()
     var timeWoke: Date = Date()
-
+    var headImage: UIImage = UIImage.init(named: "face_normal")!
     var food = [Food]()
     var activities = [Activity]()
     var friends = [User]()
-    
-    init(username: String, password: String, firstName: String, lastName: String, parentEmail: String) {
+        init(username: String, password: String, firstName: String, lastName: String, parentEmail: String) {
         self.username = username
         self.password = password
         self.firstName = firstName

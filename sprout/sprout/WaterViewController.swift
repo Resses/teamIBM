@@ -37,13 +37,14 @@ class WaterViewController: UIViewController {
     }
 
     @IBAction func drink(_ sender: UIButton) {
-        if sender.currentImage == #imageLiteral(resourceName: "watercupBlue"){
-            sender.setImage(#imageLiteral(resourceName: "watercupGrey"), for: UIControlState.normal)
+        if sender.isSelected{
+            sender.setImage(#imageLiteral(resourceName: "watercupGrey"), for: UIControlState.selected)
+            sender.isSelected = false
             self.cupDrank -= 1
 
         }else{
-            
             sender.setImage(#imageLiteral(resourceName: "watercupBlue"), for: UIControlState.normal)
+            sender.isSelected = true
             self.cupDrank += 1
         }
     }
