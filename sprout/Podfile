@@ -7,7 +7,7 @@ target 'sprout' do
 
   # Pods for sprout
   pod 'Firebase/Core'
-
+  pod 'Firebase/Auth'
 
   target 'sproutTests' do
     inherit! :search_paths

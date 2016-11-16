@@ -25,6 +25,7 @@
 		5303D6461DBA71C6005469BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6431DBA71C6005469BE /* User.swift */; };
 		5347BD7E1DDAB68A00A9E05B /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */; };
 		BDD9A0531DDB785600F4FC9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */; };
+		BDD9A0551DDBD15D00F4FC9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9A0541DDBD15D00F4FC9D /* LoginViewController.swift */; };
 		D6EBAB9F03E188C77226D64D /* Pods_sprout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C205C17997544589B4D8B6 /* Pods_sprout.framework */; };
 		E205096E4E811F6943B32DDF /* Pods_sproutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF120D1B6ADC5EBA372E9991 /* Pods_sproutUITests.framework */; };
 		E28A773B83CBC631DDC8BA62 /* Pods_sproutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB43DBF5BCEB56806FAEDD40 /* Pods_sproutTests.framework */; };
@@ -77,6 +78,8 @@
 		9951C481C0AFE6A403903B44 /* Pods-sproutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sproutTests/Pods-sproutTests.release.xcconfig"; sourceTree = "<group>"; };
 		B887F3628A6356C7AC62752A /* Pods-sprout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sprout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sprout/Pods-sprout.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDD9A0541DDBD15D00F4FC9D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BDD9A0561DDCC93300F4FC9D /* sprout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sprout.entitlements; sourceTree = "<group>"; };
 		CB43DBF5BCEB56806FAEDD40 /* Pods_sproutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sproutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C205C17997544589B4D8B6 /* Pods_sprout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sprout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADA9E259A00C3360D74091E /* Pods-sproutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sproutUITests/Pods-sproutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		5303D6061DB97BAE005469BE /* sprout */ = {
 			isa = PBXGroup;
 			children = (
+				BDD9A0561DDCC93300F4FC9D /* sprout.entitlements */,
 				5303D6411DBA71C6005469BE /* Activity.swift */,
 				5303D6421DBA71C6005469BE /* Food.swift */,
 				5303D6431DBA71C6005469BE /* User.swift */,
@@ -166,6 +170,7 @@
 				5303D63F1DB9B7B2005469BE /* WaterCupCollectionViewCell.swift */,
 				5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */,
 				BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */,
+				BDD9A0541DDBD15D00F4FC9D /* LoginViewController.swift */,
 			);
 			path = sprout;
 			sourceTree = "<group>";
@@ -277,6 +282,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QQVVSLSE97;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					5303D6171DB97BAE005469BE = {
 						CreatedOnToolsVersion = 8.0;
@@ -494,6 +504,7 @@
 				5303D6451DBA71C6005469BE /* Food.swift in Sources */,
 				5303D63C1DB98DD4005469BE /* SportViewController.swift in Sources */,
 				5303D63E1DB9B486005469BE /* WaterCupsCollectionViewController.swift in Sources */,
+				BDD9A0551DDBD15D00F4FC9D /* LoginViewController.swift in Sources */,
 				5303D6461DBA71C6005469BE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +658,7 @@
 			baseConfigurationReference = B887F3628A6356C7AC62752A /* Pods-sprout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sprout/sprout.entitlements;
 				DEVELOPMENT_TEAM = QQVVSLSE97;
 				INFOPLIST_FILE = sprout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,6 +673,7 @@
 			baseConfigurationReference = 319C80C60CCA5FF21BEEC054 /* Pods-sprout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sprout/sprout.entitlements;
 				DEVELOPMENT_TEAM = QQVVSLSE97;
 				INFOPLIST_FILE = sprout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

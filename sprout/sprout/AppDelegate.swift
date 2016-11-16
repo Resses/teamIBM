@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
+        try! FIRAuth.auth()!.signOut()
 
         waterView = WaterViewController()
         sportView = SportViewController()
@@ -27,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         foodView = FoodViewController()
 
         // A Fake user for now
-        user = User.init(username: "Tony", password: "12345", firstName: "Tony", lastName: "Wu", parentEmail: "123@321.com")
+        user = User.init(uid: "Tony", firstName: "Tony", lastName: "Wu", parentEmail: "123@321.com")
         // Override point for customization after application launch.
         return true
     }

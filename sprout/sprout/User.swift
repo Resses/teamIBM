@@ -8,10 +8,10 @@
 
 
 import Foundation
+import FirebaseAuth
 
 class User {
-    var username: String
-    var password: String
+    var uid: String
     var firstName: String
     var lastName: String
     var parentEmail: String
@@ -25,9 +25,15 @@ class User {
     var activities = [Activity]()
     var friends = [User]()
     
-    init(username: String, password: String, firstName: String, lastName: String, parentEmail: String) {
-        self.username = username
-        self.password = password
+    init(authData: FIRUser,  firstName: String, lastName: String) {
+        uid = authData.uid
+        parentEmail = authData.email!
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    init(uid: String, firstName: String, lastName: String, parentEmail: String) {
+        self.uid = uid
         self.firstName = firstName
         self.lastName = lastName
         self.parentEmail = parentEmail
