@@ -12,12 +12,14 @@ import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var user: User?
+    var user: User!
     var window: UIWindow?
     var waterView: WaterViewController?
     var sportView: SportViewController?
     var sleepView: SleepViewController?
     var foodView: FoodViewController?
+    var socialView = SocialViewController?.self
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
@@ -27,9 +29,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sportView = SportViewController()
         sleepView = SleepViewController()
         foodView = FoodViewController()
+        //socialView = SocialViewController()
+
+        
 
         // A Fake user for now
         user = User.init(uid: "Tony", firstName: "Tony", lastName: "Wu", parentEmail: "123@321.com")
+        /*
+        let friend1 = User.init(username: "Alex", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
+        friend1.cupsOfWater = 2
+        friend1.hoursOfSleep = 7.5
+        friend1.score = 50
+        let friend2 = User.init(username: "Ben", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
+        let friend3 = User.init(username: "Max", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
+        friend2.headImage = UIImage.init(named: "face_crying")!
+        friend2.score = 30
+        friend3.headImage = UIImage.init(named: "face_crying")!
+        user!.friends = [friend1, friend2, friend3]
+        */
         // Override point for customization after application launch.
         return true
     }

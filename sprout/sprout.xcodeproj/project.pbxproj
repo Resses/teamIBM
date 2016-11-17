@@ -18,12 +18,12 @@
 		5303D6381DB98D96005469BE /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6371DB98D96005469BE /* FoodViewController.swift */; };
 		5303D63A1DB98DB8005469BE /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6391DB98DB8005469BE /* WaterViewController.swift */; };
 		5303D63C1DB98DD4005469BE /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D63B1DB98DD4005469BE /* SportViewController.swift */; };
-		5303D63E1DB9B486005469BE /* WaterCupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D63D1DB9B486005469BE /* WaterCupsCollectionViewController.swift */; };
-		5303D6401DB9B7B2005469BE /* WaterCupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D63F1DB9B7B2005469BE /* WaterCupCollectionViewCell.swift */; };
 		5303D6441DBA71C6005469BE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6411DBA71C6005469BE /* Activity.swift */; };
 		5303D6451DBA71C6005469BE /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6421DBA71C6005469BE /* Food.swift */; };
 		5303D6461DBA71C6005469BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6431DBA71C6005469BE /* User.swift */; };
-		5347BD7E1DDAB68A00A9E05B /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */; };
+		531CE09D1DDCD0B10067F239 /* FriendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */; };
+		532425E41DDBADE300321841 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532425E31DDBADE300321841 /* SocialViewController.swift */; };
+		532425E61DDBCFC300321841 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532425E51DDBCFC200321841 /* SocialTableViewCell.swift */; };
 		BDD9A0531DDB785600F4FC9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */; };
 		BDD9A0551DDBD15D00F4FC9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9A0541DDBD15D00F4FC9D /* LoginViewController.swift */; };
 		D6EBAB9F03E188C77226D64D /* Pods_sprout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C205C17997544589B4D8B6 /* Pods_sprout.framework */; };
@@ -67,12 +67,12 @@
 		5303D6371DB98D96005469BE /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		5303D6391DB98DB8005469BE /* WaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
 		5303D63B1DB98DD4005469BE /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
-		5303D63D1DB9B486005469BE /* WaterCupsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterCupsCollectionViewController.swift; sourceTree = "<group>"; };
-		5303D63F1DB9B7B2005469BE /* WaterCupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterCupCollectionViewCell.swift; sourceTree = "<group>"; };
 		5303D6411DBA71C6005469BE /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5303D6421DBA71C6005469BE /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5303D6431DBA71C6005469BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewController.swift; sourceTree = "<group>"; };
+		531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPageViewController.swift; sourceTree = "<group>"; };
+		532425E31DDBADE300321841 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		532425E51DDBCFC200321841 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
 		8E891E74F738D4DBA8507181 /* Pods-sproutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sproutUITests/Pods-sproutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F8B60EA44A475DFAFE0C611 /* Pods-sproutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sproutTests/Pods-sproutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9951C481C0AFE6A403903B44 /* Pods-sproutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sproutTests/Pods-sproutTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,9 +166,9 @@
 				5303D6131DB97BAE005469BE /* Info.plist */,
 				5303D6391DB98DB8005469BE /* WaterViewController.swift */,
 				5303D63B1DB98DD4005469BE /* SportViewController.swift */,
-				5303D63D1DB9B486005469BE /* WaterCupsCollectionViewController.swift */,
-				5303D63F1DB9B7B2005469BE /* WaterCupCollectionViewCell.swift */,
-				5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */,
+				532425E31DDBADE300321841 /* SocialViewController.swift */,
+				532425E51DDBCFC200321841 /* SocialTableViewCell.swift */,
+				531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */,
 				BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */,
 				BDD9A0541DDBD15D00F4FC9D /* LoginViewController.swift */,
 			);
@@ -495,16 +495,16 @@
 			files = (
 				5303D6361DB98B82005469BE /* SleepViewController.swift in Sources */,
 				5303D60A1DB97BAE005469BE /* ViewController.swift in Sources */,
-				5303D6401DB9B7B2005469BE /* WaterCupCollectionViewCell.swift in Sources */,
+				532425E41DDBADE300321841 /* SocialViewController.swift in Sources */,
+				532425E61DDBCFC300321841 /* SocialTableViewCell.swift in Sources */,
 				5303D63A1DB98DB8005469BE /* WaterViewController.swift in Sources */,
-				5347BD7E1DDAB68A00A9E05B /* SocialTableViewController.swift in Sources */,
 				5303D6381DB98D96005469BE /* FoodViewController.swift in Sources */,
 				5303D6081DB97BAE005469BE /* AppDelegate.swift in Sources */,
 				5303D6441DBA71C6005469BE /* Activity.swift in Sources */,
 				5303D6451DBA71C6005469BE /* Food.swift in Sources */,
 				5303D63C1DB98DD4005469BE /* SportViewController.swift in Sources */,
-				5303D63E1DB9B486005469BE /* WaterCupsCollectionViewController.swift in Sources */,
 				BDD9A0551DDBD15D00F4FC9D /* LoginViewController.swift in Sources */,
+				531CE09D1DDCD0B10067F239 /* FriendPageViewController.swift in Sources */,
 				5303D6461DBA71C6005469BE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
