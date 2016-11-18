@@ -52,12 +52,18 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
 //        }
         cell.friend = currentFriend
         cell.friendScoreBar.setProgress(Float(currentFriend.score) / 100, animated: true)
+        cell.scoreLabel.text = String(currentFriend.score)
         cell.friendNameLabel.text = currentFriend.username
         cell.friendNameLabel.textColor = UIColor.orange
         cell.friendNameLabel.textAlignment = NSTextAlignment.center
         cell.friendNameLabel.font = UIFont(name: "Chalkboard SE", size: 14.0)
+        cell.scoreLabel.font = UIFont(name: "Chalkboard SE", size: 10.0)
+
         cell.headImage.image = currentFriend.headImage
         cell.isUserInteractionEnabled = true
+        if indexPath.row == 0 {
+            cell.crownImageView.image = UIImage.init(named: "crown")
+        }
         return cell
     }
     

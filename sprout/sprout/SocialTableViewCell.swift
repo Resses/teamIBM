@@ -10,10 +10,13 @@ import UIKit
 
 class SocialTableViewCell: UITableViewCell {
     // MARK: Properties
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var headImage: UIImageView!
     @IBOutlet weak var friendNameLabel: UILabel!
     @IBOutlet weak var friendScoreBar: UIProgressView!
     @IBOutlet weak var likeBtn: UIButton!
+    @IBOutlet weak var crownImageView: UIImageView!
+    
     var friendScore: Int? = 0
     var friend: User?
     
@@ -28,6 +31,7 @@ class SocialTableViewCell: UITableViewCell {
         }else{
             likeBtn.setImage(#imageLiteral(resourceName: "thumb-grey"), for: UIControlState.normal)
         }
+        
         // Initialization code
     }
 

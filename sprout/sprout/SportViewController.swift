@@ -56,7 +56,8 @@ class SportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         appDel.user!.activities.append(exercise!)
         appDel.user!.score += 1
         print("Sport: ?, Minutes: ?",sportType, minutes)
-        
+        appDel.user!.avatarImage = UIImage.init(named: "avatar_muscle")!
+        //self.present(homeView, animated: true, completion: nil)
     }
     //MARK: - Delegates and data sources
     
@@ -89,13 +90,20 @@ class SportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
 
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+
+        if segue.identifier == "sportToHome"
+        {
+            
+            if let destinationVC = segue.destination as? ViewController {
+                destinationVC.addScore = "+10pt!"
+            }
+        }
      }
-     */
+    
+
 }

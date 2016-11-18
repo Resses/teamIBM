@@ -24,14 +24,15 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-sR-DuY">
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" rowHeight="100" id="LCG-LR-YOv" customClass="SocialTableViewCell" customModule="sprout" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LCG-LR-YOv" id="Cql-0s-KW3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="socialIcon" translatesAutoresizingMaskIntoConstraints="NO" id="twf-jH-y8c">
@@ -41,9 +42,10 @@
                                                 <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" progressImage="progressBar" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-EM-g5d">
                                                     <rect key="frame" x="96" y="51" width="201" height="2"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="trackTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnW-9Y-VEf">
-                                                    <rect key="frame" x="322" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="311" y="31" width="41" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="thumb-grey"/>
                                                     <connections>
@@ -57,15 +59,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-d7-CRD">
+                                                    <rect key="frame" x="17" y="-8" width="49" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUV-VD-2Zh">
+                                                    <rect key="frame" x="175" y="61" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="crownImageView" destination="YOA-d7-CRD" id="xw5-FZ-FT3"/>
                                             <outlet property="friendNameLabel" destination="rwB-50-OWF" id="4fh-jz-TI1"/>
                                             <outlet property="friendScoreBar" destination="ATS-EM-g5d" id="FLH-lQ-NhF"/>
                                             <outlet property="headImage" destination="twf-jH-y8c" id="9rN-SL-PII"/>
                                             <outlet property="likeBtn" destination="qnW-9Y-VEf" id="igQ-c5-rlx"/>
+                                            <outlet property="scoreLabel" destination="eUV-VD-2Zh" id="CYF-zo-iNx"/>
                                             <segue destination="kGb-d3-JHi" kind="show" identifier="viewFriendSegue" id="ncr-gT-ACZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -120,13 +135,14 @@
                                     <segue destination="gtQ-9U-RLk" kind="show" id="4Ip-aZ-3Yp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sprout" translatesAutoresizingMaskIntoConstraints="NO" id="8Fd-AW-cv5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sprout_normal" translatesAutoresizingMaskIntoConstraints="NO" id="8Fd-AW-cv5">
                                 <rect key="frame" x="28" y="108" width="250" height="383"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.60000002384185791" progressImage="progressBar" translatesAutoresizingMaskIntoConstraints="NO" id="qLn-xp-WKR">
                                 <rect key="frame" x="168" y="290" width="318" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Water:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32h-IR-yXn">
                                 <rect key="frame" x="28" y="513" width="81" height="21"/>
@@ -249,7 +265,7 @@
                                     <segue destination="gtQ-9U-RLk" kind="show" id="viR-Yc-6TS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sprout" translatesAutoresizingMaskIntoConstraints="NO" id="9FP-G3-StW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sprout_normal" translatesAutoresizingMaskIntoConstraints="NO" id="9FP-G3-StW">
                                 <rect key="frame" x="36" y="121" width="250" height="383"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -264,11 +280,21 @@
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.59999999999999998" progressImage="progressBar" translatesAutoresizingMaskIntoConstraints="NO" id="E9A-Dd-C5U">
                                 <rect key="frame" x="165" y="346" width="318" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="trackTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwf-SE-nNx">
+                                <rect key="frame" x="303" y="142" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="addScoreLabel" destination="pwf-SE-nNx" id="34B-uQ-kvW"/>
+                        <outlet property="avatarImageView" destination="9FP-G3-StW" id="ofT-Mb-eV9"/>
                         <outlet property="scoreBar" destination="E9A-Dd-C5U" id="87w-HL-zN7"/>
                     </connections>
                 </viewController>
@@ -325,13 +351,30 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="yKS-yM-tSm"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D2s-Os-ZDU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YJ-YB-v8e">
+                                <rect key="frame" x="168" y="517" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan!">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanFood:" destination="VPs-72-qOu" eventType="touchUpInside" id="LjZ-xM-uFC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="scanImageView" destination="D2s-Os-ZDU" id="cyb-Pa-pzd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGH-3i-hkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1465" y="752"/>
+            <point key="canvasLocation" x="-1466.4000000000001" y="751.57421289355329"/>
         </scene>
         <!--Water View Controller-->
         <scene sceneID="fBO-8w-Zbr">
@@ -559,7 +602,7 @@
                                 <state key="normal" title="Haha" image="doneBtn"/>
                                 <connections>
                                     <action selector="doneBtnPressed:" destination="49s-lP-kwK" eventType="touchUpInside" id="euy-hk-jpW"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ROE-xy-Oej"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="sportToHome" id="ROE-xy-Oej"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njY-mf-e1v">
@@ -794,7 +837,7 @@
         <image name="socialBtn" width="114" height="114"/>
         <image name="socialIcon" width="152" height="139"/>
         <image name="sportButton" width="114" height="114"/>
-        <image name="sprout" width="434" height="684"/>
+        <image name="sprout_normal" width="434" height="684"/>
         <image name="swim" width="125" height="136"/>
         <image name="thumb-grey" width="64" height="66"/>
         <image name="water-chosen" width="114" height="114"/>
@@ -803,11 +846,11 @@
         <image name="weight" width="121" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qrc-Kk-oES"/>
-        <segue reference="cc4-eR-Zfv"/>
-        <segue reference="viR-Yc-6TS"/>
+        <segue reference="ROE-xy-Oej"/>
         <segue reference="aGR-27-S7j"/>
-        <segue reference="zrh-6t-U99"/>
         <segue reference="H6q-Vc-6A3"/>
+        <segue reference="Qrc-Kk-oES"/>
+        <segue reference="zrh-6t-U99"/>
+        <segue reference="4Ip-aZ-3Yp"/>
     </inferredMetricsTieBreakers>
 </document>

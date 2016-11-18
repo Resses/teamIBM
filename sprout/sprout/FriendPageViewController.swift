@@ -20,6 +20,7 @@ class FriendPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        avatarImageView.image = friend?.avatarImage
         scoreBar.setProgress(Float((friend?.score)!) / 100.0, animated: true)
         let scale = CGAffineTransform(scaleX: 1, y: 10)
         let rotation = CGAffineTransform(rotationAngle:(1.5 * CGFloat(M_PI)))

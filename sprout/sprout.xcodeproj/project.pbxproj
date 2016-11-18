@@ -21,17 +21,13 @@
 		5303D6441DBA71C6005469BE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6411DBA71C6005469BE /* Activity.swift */; };
 		5303D6451DBA71C6005469BE /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6421DBA71C6005469BE /* Food.swift */; };
 		5303D6461DBA71C6005469BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303D6431DBA71C6005469BE /* User.swift */; };
-
 		531CE09D1DDCD0B10067F239 /* FriendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */; };
 		532425E41DDBADE300321841 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532425E31DDBADE300321841 /* SocialViewController.swift */; };
 		532425E61DDBCFC300321841 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532425E51DDBCFC200321841 /* SocialTableViewCell.swift */; };
-
-		5347BD7E1DDAB68A00A9E05B /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */; };
 		BDD9A0531DDB785600F4FC9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */; };
 		D6EBAB9F03E188C77226D64D /* Pods_sprout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C205C17997544589B4D8B6 /* Pods_sprout.framework */; };
 		E205096E4E811F6943B32DDF /* Pods_sproutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF120D1B6ADC5EBA372E9991 /* Pods_sproutUITests.framework */; };
 		E28A773B83CBC631DDC8BA62 /* Pods_sproutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB43DBF5BCEB56806FAEDD40 /* Pods_sproutTests.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,12 +69,9 @@
 		5303D6411DBA71C6005469BE /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5303D6421DBA71C6005469BE /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5303D6431DBA71C6005469BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-
 		531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPageViewController.swift; sourceTree = "<group>"; };
 		532425E31DDBADE300321841 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		532425E51DDBCFC200321841 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
-
-		5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewController.swift; sourceTree = "<group>"; };
 		8E891E74F738D4DBA8507181 /* Pods-sproutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sproutUITests/Pods-sproutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F8B60EA44A475DFAFE0C611 /* Pods-sproutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sproutTests/Pods-sproutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9951C481C0AFE6A403903B44 /* Pods-sproutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sproutTests/Pods-sproutTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +81,6 @@
 		E9C205C17997544589B4D8B6 /* Pods_sprout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sprout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADA9E259A00C3360D74091E /* Pods-sproutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sproutUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sproutUITests/Pods-sproutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF120D1B6ADC5EBA372E9991 /* Pods_sproutUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sproutUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,16 +162,10 @@
 				5303D6131DB97BAE005469BE /* Info.plist */,
 				5303D6391DB98DB8005469BE /* WaterViewController.swift */,
 				5303D63B1DB98DD4005469BE /* SportViewController.swift */,
-
 				532425E31DDBADE300321841 /* SocialViewController.swift */,
 				532425E51DDBCFC200321841 /* SocialTableViewCell.swift */,
 				531CE09C1DDCD0B10067F239 /* FriendPageViewController.swift */,
-
-				5303D63D1DB9B486005469BE /* WaterCupsCollectionViewController.swift */,
-				5303D63F1DB9B7B2005469BE /* WaterCupCollectionViewCell.swift */,
-				5347BD7D1DDAB68A00A9E05B /* SocialTableViewController.swift */,
 				BDD9A0521DDB785600F4FC9D /* GoogleService-Info.plist */,
-
 			);
 			path = sprout;
 			sourceTree = "<group>";

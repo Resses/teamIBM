@@ -10,6 +10,7 @@ import UIKit
 
 class FoodViewController: UIViewController {
 
+    @IBOutlet weak var scanImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,8 @@ class FoodViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func scanFood(_ sender: Any) {
+    }
 
     /*
     // MARK: - Navigation

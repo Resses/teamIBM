@@ -23,6 +23,7 @@ class User {
     var timeSlept: Date = Date()
     var timeWoke: Date = Date()
     var headImage: UIImage = UIImage.init(named: "face_normal")!
+    var avatarImage: UIImage = UIImage.init(named: "sprout_normal")!
     var food = [Food]()
     var activities = [Activity]()
     var friends = [User]()

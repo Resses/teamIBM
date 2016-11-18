@@ -40,8 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let friend2 = User.init(username: "Ben", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
         let friend3 = User.init(username: "Max", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
         friend2.headImage = UIImage.init(named: "face_crying")!
+        friend2.avatarImage = UIImage.init(named: "avatar_crying")!
         friend2.score = 30
         friend3.headImage = UIImage.init(named: "face_crying")!
+        friend3.avatarImage = UIImage.init(named: "avatar_sleepy")!
         user!.friends = [friend1, friend2, friend3]
         
         // Override point for customization after application launch.
