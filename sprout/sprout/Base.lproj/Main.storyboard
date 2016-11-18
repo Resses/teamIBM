@@ -241,7 +241,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" image="foodButton"/>
                                 <connections>
-                                    <segue destination="VPs-72-qOu" kind="show" id="H6q-Vc-6A3"/>
+                                    <action selector="scanFood:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMp-RU-lsf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEy-eX-vfu">
@@ -269,6 +269,13 @@
                                 <rect key="frame" x="36" y="121" width="250" height="383"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-pG-d6Z">
+                                <rect key="frame" x="155" y="356" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhH-d4-jEb">
                                 <rect key="frame" x="289" y="574" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
@@ -289,13 +296,29 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-Yc-CY9">
+                                <rect key="frame" x="0.0" y="98" width="375" height="468"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-DD-jXw">
+                                <rect key="frame" x="172" y="512" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eat!"/>
+                                <connections>
+                                    <action selector="eatBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qmZ-Wn-c3M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="addScoreLabel" destination="pwf-SE-nNx" id="34B-uQ-kvW"/>
                         <outlet property="avatarImageView" destination="9FP-G3-StW" id="ofT-Mb-eV9"/>
+                        <outlet property="eatBtn" destination="lbk-DD-jXw" id="Db9-Aq-BZF"/>
+                        <outlet property="foodItemImageView" destination="1Ny-Yc-CY9" id="BpP-bY-xJT"/>
+                        <outlet property="foodItemLabel" destination="EbI-pG-d6Z" id="zc0-3D-eX4"/>
                         <outlet property="scoreBar" destination="E9A-Dd-C5U" id="87w-HL-zN7"/>
+                        <segue destination="VPs-72-qOu" kind="show" identifier="homeToFood" id="uaf-Cb-KtQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -846,11 +869,11 @@
         <image name="weight" width="121" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ROE-xy-Oej"/>
+        <segue reference="yKS-yM-tSm"/>
+        <segue reference="uaf-Cb-KtQ"/>
         <segue reference="aGR-27-S7j"/>
-        <segue reference="H6q-Vc-6A3"/>
         <segue reference="Qrc-Kk-oES"/>
         <segue reference="zrh-6t-U99"/>
-        <segue reference="4Ip-aZ-3Yp"/>
+        <segue reference="viR-Yc-6TS"/>
     </inferredMetricsTieBreakers>
 </document>
