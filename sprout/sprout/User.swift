@@ -24,7 +24,7 @@ class User {
     var timeWoke: Date = Date()
     var headImage: UIImage = UIImage.init(named: "face_normal")!
     var avatarImage: UIImage = UIImage.init(named: "sprout_normal")!
-    var food = [Food]()
+    var foodItems = [Food]()
     var activities = [Activity]()
     var friends = [User]()
         init(username: String, password: String, firstName: String, lastName: String, parentEmail: String) {

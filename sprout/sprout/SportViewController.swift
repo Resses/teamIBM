@@ -18,7 +18,7 @@ class SportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var minutes: Int = 0
     var exercise: Activity?
     let pickerData = [
-        ["0 hour", "1 hour", "2 hour", "3 hour", "4 hour", "5 hour"],
+        ["0 hour", "1 hour", "2 hour", "3 hour"],
         ["0 min","10 min","20 min","30 min","40 min","50 min"]
     ]
     
@@ -54,7 +54,7 @@ class SportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func doneBtnPressed(_ sender: AnyObject) {
         exercise = Activity.init(sport: sportType, minutes: minutes)
         appDel.user!.activities.append(exercise!)
-        appDel.user!.score += 1
+        appDel.user!.score += Int(minutes/60 * 10)
         print("Sport: ?, Minutes: ?",sportType, minutes)
         appDel.user!.avatarImage = UIImage.init(named: "avatar_muscle")!
         //self.present(homeView, animated: true, completion: nil)
@@ -100,7 +100,7 @@ class SportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         {
             
             if let destinationVC = segue.destination as? ViewController {
-                destinationVC.addScore = "+10pt!"
+                destinationVC.addScore = "+"+String(minutes/60 * 10)+"pt!"
             }
         }
      }

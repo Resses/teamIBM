@@ -13,11 +13,17 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var friendsTable: UITableView!
     
     let appDel = UIApplication.shared.delegate! as! AppDelegate
+    var friendsList = [User]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         friendsTable.delegate = self
         friendsTable.dataSource = self
         friendsTable.rowHeight = 100.0
+        
+        self.friendsList.append(appDel.user!)
+        self.friendsList.append(contentsOf: appDel.user!.friends);
+        
         // Do any additional setup after loading the view.
     }
 
@@ -35,14 +41,15 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (appDel.user.friends.count)
+        return 4 //(self.friendsList.count)
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! SocialTableViewCell
-        let currentFriend = appDel.user!.friends[indexPath.row]
+        let currentFriend = friendsList[indexPath.row]
+        
         print(currentFriend.username)
         // cell.headImage = currentFriend.headImage
         cell.friendScore = currentFriend.score
@@ -67,6 +74,10 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    @IBAction func homeBtnPressed(_ sender: Any) {
+        appDel.user!.avatarImage = UIImage.init(named: "sprout_normal")!
+
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -114,12 +125,21 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
         if segue.identifier == "viewFriendSegue" {
             let indexPath = self.friendsTable.indexPathForSelectedRow
             let friendHomeViewController = segue.destination as! FriendPageViewController
-            friendHomeViewController.friend = appDel.user!.friends[(indexPath?.row)!]
-            
+            friendHomeViewController.friend = self.friendsList[(indexPath?.row)!]
         }
+        if segue.identifier == "socialToHome"
+        {
+            
+            if let destinationVC = segue.destination as? ViewController {
+                destinationVC.addScore = ""
+                
+            }
+        }
+
 
         
     }
+    
     
 
 }

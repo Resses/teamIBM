@@ -32,13 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         // A Fake user for now
-        user = User.init(username: "Tony", password: "12345", firstName: "Tony", lastName: "Wu", parentEmail: "123@321.com")
+        user = User.init(username: "Charlie", password: "12345", firstName: "Charlie", lastName: "Wu", parentEmail: "123@321.com")
         let friend1 = User.init(username: "Alex", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
         friend1.cupsOfWater = 2
         friend1.hoursOfSleep = 7.5
-        friend1.score = 50
-        let friend2 = User.init(username: "Ben", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
-        let friend3 = User.init(username: "Max", password: "11111", firstName: "Alex", lastName: "Ann", parentEmail: "dlksf@ldk.com")
+        friend1.score = 40
+        let friend2 = User.init(username: "Ben", password: "11111", firstName: "Ben", lastName: "Ann", parentEmail: "dlksf@ldk.com")
+        let friend3 = User.init(username: "Max", password: "11111", firstName: "Max", lastName: "Ann", parentEmail: "dlksf@ldk.com")
         friend2.headImage = UIImage.init(named: "face_crying")!
         friend2.avatarImage = UIImage.init(named: "avatar_crying")!
         friend2.score = 30

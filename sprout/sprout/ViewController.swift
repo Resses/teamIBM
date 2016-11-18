@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var addScoreLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var scoreBar: UIProgressView!
-    @IBOutlet weak var foodItemLabel: UILabel!
+    @IBOutlet weak var foodItemMiniImageView: UIImageView?
     
     @IBOutlet weak var eatBtn: UIButton!
     @IBOutlet weak var foodItemImageView: UIImageView!
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         addScoreLabel.text = addScore
         self.currentScore = appDel.user!.score
-        scoreBar.setProgress(Float(self.currentScore) / 10.0, animated: true)
+        scoreBar.setProgress(Float(self.currentScore) / 100.0, animated: true)
         let scale = CGAffineTransform(scaleX: 1, y: 10)
         let rotation = CGAffineTransform(rotationAngle:(1.5 * CGFloat(M_PI)))
         self.scoreBar.transform = scale.concatenating(rotation)
@@ -51,24 +51,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func eatBtnPressed(_ sender: Any) {
         self.foodItemImageView.isHidden = true
-        self.eatBtn.isHidden = true
-        self.foodItemLabel.isHidden = false
-        self.addScoreLabel.isHidden = false
-        self.foodItemLabel.text = "Banana"
-        self.addScoreLabel.text = "+1pt!"
         
-        UIView.animate(withDuration: 3.0, animations: addScoreBar, completion: completeEating)
+        self.eatBtn.isHidden = true
+        self.foodItemMiniImageView?.isHidden = false
+        self.addScoreLabel.isHidden = false
+        self.foodItemMiniImageView?.image = UIImage.init(named: "banana")
+        self.addScoreLabel.text = "+4pt!"
+        let newFood = Food.init(name: "banana", image: UIImage.init(named: "banana")!)
+        appDel.user!.foodItems.append(newFood)
+        appDel.user!.score += 4
+        scoreBar.setProgress(Float(appDel.user!.score) / 100.0, animated: true)
+        //Maybe: Add a save func here so that we can sent that image to api
+        
+        //UIView.animate(withDuration: 3.0, animations: addScoreBar, completion: completeEating)
     }
-    
+//    func savePhoto() -> {
+//        let imageData = UIImageJPEGRepresentation(self.chosenImage!,0.6)
+//        let compressedImage = UIImage(data: imageData)
+//    }
+//    
     
     func addScoreBar() -> Void {
         
-        appDel.user!.score += 1
-        scoreBar.setProgress(Float(appDel.user!.score) / 10.0, animated: true)
+        appDel.user!.score += 4
+        scoreBar.setProgress(Float(appDel.user!.score) / 100.0, animated: true)
         
     }
     func completeEating(_: Bool) -> Void {
-        self.foodItemLabel.isHidden = true
+        self.foodItemMiniImageView?.isHidden = true
         self.addScoreLabel.isHidden = true
         
     }
@@ -76,6 +86,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         self.chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.foodItemImageView.isHidden = false
         self.foodItemImageView.image = self.chosenImage
         self.eatBtn.isHidden = false
         self.eatBtn.isEnabled = true

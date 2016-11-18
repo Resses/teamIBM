@@ -91,16 +91,28 @@ class SleepViewController: UIViewController {
         self.appDel.user?.hoursOfSleep = self.hoursOfSleep
         self.appDel.user?.timeSlept = self.timeSlept.date
         self.appDel.user?.timeWoke = self.timeWoke.date
+        self.appDel.user!.score += Int(self.hoursOfSleep * 2.5)
+        self.appDel.user!.avatarImage = UIImage.init(named: "sprout_normal")!
+        
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        print("Preparing!!!")
+        if segue.identifier == "sleepToHomeDone" {
+            print("Goind to home!!")
+            if let homeViewController = segue.destination as? ViewController{
+                let text = "+" + String(self.hoursOfSleep * 2.5) + "pt!"
+                homeViewController.addScore = text
+            }
+            
+        }
     }
-    */
+ 
 
 }

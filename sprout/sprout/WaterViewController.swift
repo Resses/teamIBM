@@ -55,7 +55,8 @@ class WaterViewController: UIViewController {
     
     @IBAction func doneBtn(_ sender: AnyObject) {
         self.appDel.user?.cupsOfWater = self.cupDrank
-        self.appDel.user?.score += self.cupDrank
+        self.appDel.user?.score += self.cupDrank * 3
+        self.appDel.user!.avatarImage = UIImage.init(named: "sprout_normal")!
     }
 
     
@@ -68,5 +69,18 @@ class WaterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "waterToHome"
+        {
+            
+            if let destinationVC = segue.destination as? ViewController {
+                destinationVC.addScore = "+"+String(self.cupDrank * 3)+"pt!"
+                destinationVC.foodItemMiniImageView?.image = UIImage.init(named: "watercupBlue")
+                destinationVC.foodItemMiniImageView?.isHidden = false
+            }
+        }
+    }
+
 
 }

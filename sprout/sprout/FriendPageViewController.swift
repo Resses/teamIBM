@@ -25,15 +25,46 @@ class FriendPageViewController: UIViewController {
         let scale = CGAffineTransform(scaleX: 1, y: 10)
         let rotation = CGAffineTransform(rotationAngle:(1.5 * CGFloat(M_PI)))
         self.scoreBar.transform = scale.concatenating(rotation)
-
-        waterLabel.text = String((friend?.cupsOfWater)!)
+        let waterString = String((friend?.cupsOfWater)!)
+        if (friend?.cupsOfWater)! > 1{
+            waterLabel.text = waterString + " Cups"
+        }else{
+            waterLabel.text = waterString + " Cup"
+        }
+        //waterLabel.text = String((friend?.cupsOfWater)!)
         var exerciseMin = 0
         for exercise in (friend?.activities)! {
             exerciseMin += exercise.minutes
             
         }
-        exerciseLabel.text = String.init(format: "? Hours ? Minutes", (exerciseMin/60), (exerciseMin % 60))
-        sleepLabel.text = String((friend?.hoursOfSleep)!)
+        let hour = Float(exerciseMin) / 60.0
+        //let min = exerciseMin % 60
+        var exerciseString = String(hour)
+        if hour > 1 {
+            exerciseString += " Hours "
+        }else {exerciseString += " Hour "}
+//        exerciseString += String(min)
+//        if min > 1 {
+//            exerciseString += " Mins"
+//        }else {exerciseString += " Min"}
+        //exerciseLabel.text = String.init(format: "? Hours ? Minutes", (exerciseMin/60), (exerciseMin % 60))
+        exerciseLabel.text = exerciseString
+        let shour = floor((friend?.hoursOfSleep)!)
+        //let smin = (friend?.hoursOfSleep)!-shour * 60
+        var sleepString = String(shour)
+        if shour > 1 {
+            sleepString += " Hours "
+        }else {sleepString += " Hour "}
+//        sleepString += String(floor(smin))
+//        if smin > 1 {
+//            
+//            sleepString += " Mins"
+//        }else {sleepString += " Min"}
+        sleepLabel.text = sleepString
+        
+        //sleepLabel.text = String((friend?.hoursOfSleep)!)
+        
+        foodLabel.text = String((friend?.foodItems.count)!) + " Power Foods"
     }
 
     override func didReceiveMemoryWarning() {
